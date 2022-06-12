@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Stock - Account</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a460bef9ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <header>
+    <div class="navber">
+        <h1>SECOND STOCK</h1>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" alt=""></a>
+        <img src="images/menu.png" class="manu-icon" alt="" onclick="menutoggle()">
+    </div> 
+   </header>
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/image1.png" width="100%" alt="">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Masuk</span>
+                            <span onclick="register()">Buat Akun</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Masuk</button>
+                            <a href="#">Lupa Password</a>
+                        </form>
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Buat Akun</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer Start-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Tentang Kami</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Affiliate Marketing</a></li>
+                        <li><a href="#">Persyaratan & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Temukan Kami</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>DOWNLOAD APP KAMI SEKARANG</h3>
+                    <div class="app-logo">
+                        <a href="#"><img src="images/play-store.png" alt=""></a>
+                        <a href="#"><img src="images/app-store.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copy; 2022 Second Stock</p>
+        </div>
+    </footer>
+    <!--Footer End-->
+    <script>
+        var MenuItems= document.getElementById("MenuItems");
+        MenuItems.style.maxHeight="0px"
+        function menutoggle(){
+            if(MenuItems.style.maxHeight=="0px"){
+                MenuItems.style.maxHeight="200px"
+            }
+            else{
+                MenuItems.style.maxHeight="0px"
+            }
+        }
+    </script>
+<!--js for toggle form-->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+            function register(){
+                RegForm.style.transform="translateX(0px)";
+                LoginForm.style.transform="translateX(0px)";
+                Indicator.style.transform="translateX(100px)";
+            }
+            function login(){
+                RegForm.style.transform ="translateX(300px)";
+                LoginForm.style.transform="translateX(300px)";
+                Indicator.style.transform="translateX(0px)";
+            }
+    </script>       
+</body>
+</html>

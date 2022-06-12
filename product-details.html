@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Stock - Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a460bef9ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="navber">
+            <h1>SECOND STOCK</h1>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" alt=""></a>
+            <img src="images/menu.png" class="manu-icon" alt="" onclick="menutoggle()">
+        </div> 
+    </header>
+    <div class="small-container single_product">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/gallery-1.jpg" id="ProductImg" width="100%" alt="">
+                <!-- <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="images/gallery-1.jpg" class="small-img" width="100%" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/gallery-2.jpg" class="small-img" width="100%" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/gallery-3.jpg" class="small-img" width="100%" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/gallery-4.jpg" class="small-img" width="100%" alt="">
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-2">
+                <p>Home / Jeans</p>
+                <h1>502™ Taper Fit Levi’s® Flex Men's Jeans</h1>
+                <h4>Rp.180.000</h4>
+                <select>
+                    <option>Pilih Ukuran</option>
+                    <option>30</option>
+                    <option>31</option>
+                    <option>32</option>
+                    <option>33</option>
+                    <option>34</option>
+                </select>
+                <input type="number" value="1">
+                <a href="cart.html" class="btn">Masukan Keranjang</a>
+                <h3>Detail Produk </h3> <br>
+                <p>Already broken-in and made better by time.
+                    Sizing measurements are reflective of new items.
+                    Deviations from these measurements may occur for used garments. Refer to the size guides & condition notes for measurements on each unique item.</p>
+            </div>
+        </div>
+    </div>
+    <!--Product Title-->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Produk Serupa</h2>
+            <p>Lihat Semua</p>
+        </div>
+    </div>
+    <section class="small-container">
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/product-1.jpg" alt="">
+                <h4>502™ Taper Fit Levi’s® Flex Men's Jeans</h4></a>
+                <p>Rp.180.000</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-2.jpg" alt="">
+                <h4>511™ Slim Fit Men's Jeans</h4>
+                <p>Rp.160.000</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-3.jpg" alt="">
+                <h4>517™ Boot Cut Men's Jeans</h4>
+                <p>Rp.160.000</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-4.jpg" alt="">
+                <h4>527™ Slim Boot Cut Men's Jeans</h4>
+                <p>Rp.170.000</p>
+            </div>
+        </div>
+    </section>
+    <!--Footer Start-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Tentang Kami</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Affiliate Marketing</a></li>
+                        <li><a href="#">Persyaratan & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Temukan Kami</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>DOWNLOAD APP KAMI SEKARANG</h3>
+                    <div class="app-logo">
+                        <a href="#"><img src="images/play-store.png" alt=""></a>
+                        <a href="#"><img src="images/app-store.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copy; 2022 Second Stock</p>
+        </div>
+    </footer>
+    <!--Footer End-->  
+    <script>
+        var MenuItems= document.getElementById("MenuItems");
+        MenuItems.style.maxHeight="0px"
+        function menutoggle(){
+            if(MenuItems.style.maxHeight=="0px"){
+                MenuItems.style.maxHeight="200px"
+            }
+            else{
+                MenuItems.style.maxHeight="0px"
+            }
+        }
+    </script>
+<!--js for product-gellary-->
+    <script>
+        var ProductImg= document.getElementById("ProductImg");
+        var SmallImg= document.getElementsByClassName("small-img");
+        SmallImg[0].onclick=function(){
+            ProductImg.src=SmallImg[0].src;
+        }
+        SmallImg[1].onclick=function(){
+            ProductImg.src=SmallImg[1].src;
+        }
+        SmallImg[2].onclick=function(){
+            ProductImg.src=SmallImg[2].src;
+        }
+        SmallImg[3].onclick=function(){
+            ProductImg.src=SmallImg[3].src;
+        }
+    </script>      
+</body>
+</html>
